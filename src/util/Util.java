@@ -15,9 +15,9 @@ import com.db4o.config.EmbeddedConfiguration;
 import com.db4o.cs.Db4oClientServer;
 import com.db4o.cs.config.ClientConfiguration;
 
-import modelo.Aluno;
-import modelo.Pessoa;
-import modelo.Telefone;
+import modelo.Show;
+import modelo.Artista;
+import modelo.Cidade;
 
 public class Util {
 	private static ObjectContainer manager;
