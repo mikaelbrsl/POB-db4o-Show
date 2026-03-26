@@ -49,6 +49,6 @@ public class Cidade{
         }
         ids = ids.trim() + "]";
         
-        return "Cidade: " + nome + " | Shows agendados: " + ids;
+        return "Cidade: " + nome + "(Shows agendados: " + ids + ")";
     }
 }

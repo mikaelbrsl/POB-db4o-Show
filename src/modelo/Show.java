@@ -44,11 +44,11 @@ public class Show {
     
     @Override
     public String toString() {
-        return String.format("Show [ID: %d] | Data: %s | Artista: %s | Local: %s", 
+        return String.format("Show [ID: %d] | Data: %s | %s | %s", 
             id, 
             data, 
-            artista.getNomeArstitico(),
-            cidade.getNome());
+            artista.toString(),
+            cidade.toString());
     }
 
     

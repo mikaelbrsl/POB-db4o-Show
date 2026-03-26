@@ -48,6 +48,6 @@ public class Artista{
         }
         ids = ids.trim() + "]";
         
-        return "Artista: " + nomeArstitico + " | Shows: " + ids;
+        return "Artista: " + nomeArstitico + " (Shows: " + ids + ")";
     }
 }
