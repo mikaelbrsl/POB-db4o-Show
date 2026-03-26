@@ -39,4 +39,15 @@ public class Artista{
         }
         
     }
+    
+    @Override
+    public String toString() {
+    	String ids = "[";
+        for (Show s : listaDeShow) {
+            ids += s.getId() + " ";
+        }
+        ids = ids.trim() + "]";
+        
+        return "Artista: " + nomeArstitico + " | Shows: " + ids;
+    }
 }

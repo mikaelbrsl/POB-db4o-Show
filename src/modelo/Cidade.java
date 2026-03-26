@@ -41,5 +41,14 @@ public class Cidade{
         this.listaDeShow = listaDeShow;
     }
 
-    
+    @Override
+    public String toString() {
+    	String ids = "[";
+        for (Show s : listaDeShow) {
+            ids += s.getId() + " ";
+        }
+        ids = ids.trim() + "]";
+        
+        return "Cidade: " + nome + " | Shows agendados: " + ids;
+    }
 }

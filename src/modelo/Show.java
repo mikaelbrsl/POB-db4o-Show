@@ -1,15 +1,16 @@
 package modelo;
-import java.util.Date;
+
+
 
 
 public class Show {
     private int id;
-    private Date data;
+    private String data;
     private Cidade cidade;
     private Artista artista;
 
 
-    public Show(int id, Date data, Cidade cidade, Artista artista) {
+    public Show(int id, String data, Cidade cidade, Artista artista) {
         this.id = id;
         this.data = data;
         this.cidade = cidade;
@@ -22,10 +23,10 @@ public class Show {
     public void setId(int id) {
         this.id = id;
     }
-    public Date getData() {
+    public String getData() {
         return data;
     }
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
     public Cidade getCidade() {
@@ -39,6 +40,15 @@ public class Show {
     }
     public void setArtista(Artista artista) {
         this.artista = artista;
+    }
+    
+    @Override
+    public String toString() {
+        return String.format("Show [ID: %d] | Data: %s | Artista: %s | Local: %s", 
+            id, 
+            data, 
+            artista.getNomeArstitico(),
+            cidade.getNome());
     }
 
     
