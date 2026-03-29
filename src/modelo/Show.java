@@ -10,8 +10,7 @@ public class Show {
     private Artista artista;
 
 
-    public Show(int id, String data, Cidade cidade, Artista artista) {
-        this.id = id;
+    public Show(String data, Cidade cidade, Artista artista) {
         this.data = data;
         this.cidade = cidade;
         this.artista = artista;
