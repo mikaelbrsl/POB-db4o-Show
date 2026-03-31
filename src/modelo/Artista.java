@@ -3,20 +3,20 @@ package modelo;
 import java.util.ArrayList;
 
 public class Artista{
-    private String nomeArstitico;
+    private String nomeArtistico;
     private ArrayList<Show> listaDeShow;
 
     public Artista(String nomeArstitico, ArrayList<Show> listaDeShow) {
-        this.nomeArstitico = nomeArstitico;
+        this.nomeArtistico = nomeArstitico;
         this.listaDeShow = listaDeShow;
     }
 
-    public String getNomeArstitico() {
-        return nomeArstitico;
+    public String getNomeArtistico() {
+        return nomeArtistico;
     }
 
-    public void setNomeArstitico(String nomeArstitico) {
-        this.nomeArstitico = nomeArstitico;
+    public void setNomeArtistico(String nomeArtistico) {
+        this.nomeArtistico = nomeArtistico;
     }
 
     public ArrayList<Show> getListaDeShow() {
@@ -27,27 +27,26 @@ public class Artista{
         this.listaDeShow = listaDeShow;
     }
 
-    public void addShow(Show show){
+    public void adicionar(Show show){
         listaDeShow.add(show);
     }
+    
 
-    public void removeShow(Show show){
-        if(listaDeShow.contains(show)){
-            listaDeShow.remove(show);
-        } else{
-            throw new NullPointerException("Artista não marcado para esse show");
-        }
+    public void remover(Show show){
+    	listaDeShow.remove(show);
         
     }
     
     @Override
     public String toString() {
-    	String ids = "[";
-        for (Show s : listaDeShow) {
-            ids += s.getId() + " ";
-        }
-        ids = ids.trim() + "]";
-        
-        return "Artista: " + nomeArstitico + " (Shows: " + ids + ")";
+    	String texto = "Nome: "+nomeArtistico + " | Shows agendados: "; 
+    	if(listaDeShow.isEmpty())
+    		texto += "Sem Shows";
+    	else
+    		for (Show s : listaDeShow)
+    			if (s != null)
+    				texto += s.getId() + ", ";
+    	
+    	return texto;
     }
 }

@@ -34,31 +34,41 @@ public class Cadastrar {
         Artista a2 = new Artista("Anitta", new ArrayList<Show>());
         Artista a3 = new Artista("Anderson Neiff", new ArrayList<Show>());
         Artista a4 = new Artista("Ivete Sangalo", new ArrayList<Show>());
+        Artista a5 = new Artista("Luan Santana", new ArrayList<Show>());
         
 
-        Show s1 = new Show(1, "20/05/2026", c1, a1);
-		a1.addShow(s1); c1.addShow(s1);
+        Show s1 = new Show("20/05/2026", c1, a1);
+		a1.adicionar(s1); c1.adicionar(s1);
 
-		Show s2 = new Show(2, "21/05/2026", c1, a2);
-		a2.addShow(s2); c1.addShow(s2);
+		Show s2 = new Show("21/05/2026", c1, a2);
+		a2.adicionar(s2); c1.adicionar(s2);
 
-		Show s3 = new Show(3, "10/06/2026", c2, a1);
-		a1.addShow(s3); c2.addShow(s3);
+		Show s3 = new Show("10/06/2026", c2, a1);
+		a1.adicionar(s3); c2.adicionar(s3);
 
-		Show s4 = new Show(4, "12/06/2026", c2, a4);
-		a4.addShow(s4); c2.addShow(s4);
+		Show s4 = new Show("12/06/2026", c2, a4);
+		a4.adicionar(s4); c2.adicionar(s4);
 
-		Show s5 = new Show(5, "05/07/2026", c3, a3);
-		a3.addShow(s5); c3.addShow(s5);
+		Show s5 = new Show("05/07/2026", c3, a3);
+		a3.adicionar(s5); c3.adicionar(s5);
 
-		Show s6 = new Show(6, "06/07/2026", c3, a2);
-		a2.addShow(s6); c3.addShow(s6);
+		Show s6 = new Show("05/07/2026", c3, a2);
+		a2.adicionar(s6); c3.adicionar(s6);
 
-		Show s7 = new Show(7, "15/08/2026", c4, a4);
-		a4.addShow(s7); c4.addShow(s7);
+		Show s7 = new Show("15/08/2026", c4, a4);
+		a4.adicionar(s7); c4.adicionar(s7);
 
-		Show s8 = new Show(8, "16/08/2026", c4, a3);
-		a3.addShow(s8); c4.addShow(s8);
+		Show s8 = new Show("16/08/2026", c4, a3);
+		a3.adicionar(s8); c4.adicionar(s8);
+		
+		Show s9 = new Show("17/08/2026", c4, a5);
+		a5.adicionar(s9); c4.adicionar(s9);
+		
+		Show s10 = new Show("18/08/2026", c4, a5);
+		a5.adicionar(s10); c4.adicionar(s10);
+		
+		Show s11 = new Show("19/08/2026", c4, a3);
+		a3.adicionar(s11); c4.adicionar(s11);
 
         manager.store(s1); 
         manager.store(s2); 
@@ -68,11 +78,15 @@ public class Cadastrar {
         manager.store(s6); 
         manager.store(s7); 
         manager.store(s8);
+        manager.store(s9);
+        manager.store(s10);
+        manager.store(s11);
 
         manager.store(a1); 
         manager.store(a2); 
         manager.store(a3); 
         manager.store(a4);
+        manager.store(a5); 
         manager.store(c1); 
         manager.store(c2); 
         manager.store(c3); 

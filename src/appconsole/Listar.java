@@ -26,26 +26,26 @@ public class Listar {
 
 
         System.out.println("\n--- LISTAGEM DE CIDADES ---");
-        Query qCidades = manager.query();
-        qCidades.constrain(Cidade.class);
-        List<Cidade> cidades = qCidades.execute();
+        Query q = manager.query();
+        q.constrain(Cidade.class);
+        List<Cidade> cidades = q.execute();
         for (Cidade c : cidades) {
             System.out.println(c); 
         }
 
 
         System.out.println("\n--- LISTAGEM DE ARTISTAS ---");
-        Query qArtistas = manager.query();
-        qArtistas.constrain(Artista.class);
-        List<Artista> artistas = qArtistas.execute();
+        q = manager.query();
+        q.constrain(Artista.class);
+        List<Artista> artistas = q.execute();
         for (Artista a : artistas) {
             System.out.println(a); 
         }
 
         System.out.println("\n--- LISTAGEM DE SHOWS ---");
-        Query qShows = manager.query();
-        qShows.constrain(Show.class);
-        List<Show> shows = qShows.execute();
+        q = manager.query();
+        q.constrain(Show.class);
+        List<Show> shows = q.execute();
         for (Show s : shows) {
             System.out.println(s);
         }

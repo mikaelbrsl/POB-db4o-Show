@@ -10,8 +10,7 @@ public class Show {
     private Artista artista;
 
 
-    public Show(int id, String data, Cidade cidade, Artista artista) {
-        this.id = id;
+    public Show(String data, Cidade cidade, Artista artista) {
         this.data = data;
         this.cidade = cidade;
         this.artista = artista;
@@ -35,6 +34,28 @@ public class Show {
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
     }
+    
+    public void adicionar(Artista a) {
+    	artista = a;
+    	a.adicionar(this);
+    	
+    }
+    
+    public void remover(Artista a) {
+    	artista = null;
+    	a.remover(this);
+    }
+    
+    public void adicionar(Cidade c) {
+    	cidade = c;
+    	c.adicionar(this);
+    }
+    
+    public void remover(Cidade c) {
+    	cidade = null;
+    	c.remover(this);
+    }
+    
     public Artista getArtista() {
         return artista;
     }
@@ -44,11 +65,23 @@ public class Show {
     
     @Override
     public String toString() {
-        return String.format("Show [ID: %d] | Data: %s | %s | %s", 
-            id, 
-            data, 
-            artista.toString(),
-            cidade.toString());
+        String texto = "Show [ID=" + id + "] | Data: " + data + " | ";
+
+        if (artista == null) {
+            texto += "Sem artista";
+        } else {
+            texto += "Artista: " + artista.getNomeArtistico(); 
+        }
+
+        texto += " | ";
+
+        if (cidade == null) {
+            texto += "Sem cidade";
+        } else {
+            texto += "Cidade: " + cidade.getNome();
+        }
+
+        return texto;
     }
 
     

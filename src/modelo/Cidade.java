@@ -12,17 +12,26 @@ public class Cidade{
         this.listaDeShow = listaDeShow;
     }
 
-    public void addShow(Show show){
-        listaDeShow.add(show);
+//    public void addShow(Show show){
+//        listaDeShow.add(show);
+//    }
+//
+//    public void removeShow(Show show){
+//        if(listaDeShow.contains(show)){
+//            listaDeShow.remove(show);
+//        } else{
+//            throw new NullPointerException("Não tem esse show na cidade");
+//        }
+//        
+//    }
+    
+    public void adicionar(Show show) {
+    	listaDeShow.add(show);
+    	
     }
-
-    public void removeShow(Show show){
-        if(listaDeShow.contains(show)){
-            listaDeShow.remove(show);
-        } else{
-            throw new NullPointerException("Não tem esse show na cidade");
-        }
-        
+    
+    public void remover(Show show) {
+    	listaDeShow.remove(show);
     }
 
     public String getNome() {
@@ -43,12 +52,14 @@ public class Cidade{
 
     @Override
     public String toString() {
-    	String ids = "[";
-        for (Show s : listaDeShow) {
-            ids += s.getId() + " ";
-        }
-        ids = ids.trim() + "]";
-        
-        return "Cidade: " + nome + "(Shows agendados: " + ids + ")";
+    	String texto = "Nome: "+nome + " | Shows agendados: "; 
+    	if(listaDeShow.isEmpty())
+    		texto += "Sem Shows";
+    	else
+    		for (Show s : listaDeShow)
+    			if(s != null)
+    				texto += +s.getId() + ", ";
+    	
+    	return texto;
     }
 }
