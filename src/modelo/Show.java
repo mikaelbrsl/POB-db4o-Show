@@ -70,7 +70,7 @@ public class Show {
         if (artista == null) {
             texto += "Sem artista";
         } else {
-            texto += "Artista: " + artista.getNomeArtistico(); 
+            texto += "Artista: " + artista.toString(); 
         }
 
         texto += " | ";
@@ -78,7 +78,7 @@ public class Show {
         if (cidade == null) {
             texto += "Sem cidade";
         } else {
-            texto += "Cidade: " + cidade.getNome();
+            texto += "Cidade: " + cidade.toString();
         }
 
         return texto;
