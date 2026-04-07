@@ -28,6 +28,7 @@ public class Cadastrar {
         Cidade c2 = new Cidade("Campina Grande", new ArrayList<Show>());
         Cidade c3 = new Cidade("Recife", new ArrayList<Show>());
         Cidade c4 = new Cidade("Natal", new ArrayList<Show>());
+        Cidade c5 = new Cidade("Recife", new ArrayList<Show>());
 
      
         Artista a1 = new Artista("Alok", new ArrayList<Show>());
@@ -82,15 +83,7 @@ public class Cadastrar {
         manager.store(s10);
         manager.store(s11);
 
-        manager.store(a1); 
-        manager.store(a2); 
-        manager.store(a3); 
-        manager.store(a4);
-        manager.store(a5); 
-        manager.store(c1); 
-        manager.store(c2); 
-        manager.store(c3); 
-        manager.store(c4);
+        manager.store(c5);
 
         manager.commit();
         Util.desconectar();
